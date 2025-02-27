@@ -21,4 +21,4 @@ Connect with SSH:
 Overflow the password input buffer with the correct number of characters to overwrite the correct password buffer such that the contents of both buffers match. 96 of the same letters will work.
 
 ## Flag
-`CSSACTF{lE7-m3-Se3-t4e-Wi7n3ss-Te5t1m0ny-82fe2946}`
+`cssactf{lE7-m3-Se3-t4e-Wi7n3ss-Te5t1m0ny-82fe2946}`

@@ -1,0 +1,14 @@
+{
+    "defaultAction": "SCMP_ACT_ALLOW",
+    "architectures": ["SCMP_ARCH_X86_64"],
+    "syscalls": [
+        {
+            "names": [
+                "clone", "fork", "vfork", "execve", "ptrace",
+                "chmod", "chown", "setuid", "setgid",
+                "setresuid", "setresgid", "setrlimit", "capset"
+            ],
+            "action": "SCMP_ACT_LOG"
+        }
+    ]
+}

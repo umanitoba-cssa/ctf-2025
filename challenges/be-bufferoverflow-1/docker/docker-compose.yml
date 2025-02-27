@@ -1,0 +1,11 @@
+version: "3.8"
+
+services:
+  be-bufferoverflow-1:
+    build: .
+    container_name: be-bufferoverflow-1
+    ports:
+      - "30201:22"
+    restart: unless-stopped
+    # security_opt:
+    #   - seccomp:seccomp.json  # Enable syscall restrictions

@@ -1,19 +1,23 @@
+
+
 class RePrimeSuspect {
-    public static int[][] arr = new int[12][30];
+    public static int[][] arr = new int[12][16];
     public static void main(String[] args) {
         if (args.length != 1) {
             System.out.println("Enter your key");
             System.exit(1);
         }
-        if (args[0].length() != 10) {
-            System.out.println("Enter ONLY 10 characters");
+        if (args[0].length() < 12) {
+            System.out.println("Enter ONLY 12 characters or less");
             System.exit(1);
         }
-        String str = "CSSAHostingCTF";
-        for (int i = 0; i < 10; i++) {
-            decompInt(str.charAt(i), i);
+        //CSSAHostsCTF
+        String target = "IFBAABCCAAAAAABA";
+        String str = args[0];
+        for (int i = 0; i < str.length(); i++) {
+            decompInt(str.charAt(i) - 'A' + 1, i);
         }
-        if(args[0].equals(toString(arr))) {
+        if(target.equals(toString(arr))) {
             System.out.println("Secret Message");
         } else {
             System.out.println("Nope Try Again");
@@ -38,10 +42,10 @@ class RePrimeSuspect {
                         n /= num;
                     }
                     if (counter == 1) {
-                        arr[row][prime_N(130,num)] = 1;
+                        arr[row][prime_N(58,num)] = 1;
                     }
                     else if (counter > 1) {
-                        arr[row][prime_N(130,num)] = counter;
+                        arr[row][prime_N(58,num)] = counter;
                     }
                 }
                 num++;
@@ -84,18 +88,14 @@ class RePrimeSuspect {
 
     static String toString(int[][] a) {
         String toReturn = "";
-        for (int sec = 0; sec < 10; sec++) {
-            int sum = 0;
-            for (int row = 0; row < 10; row++) {
-                for (int col = 0; col < 3; col++) {
-                    sum += a[row][3*sec + col];
+            for (int col = 0; col < 16; col++) {
+                int sum = 0;
+                for (int row = 0; row < 12; row++) {
+                    sum += a[row][col];
                 }
+                int corrected = sum + 'A';
+                toReturn += (char)corrected;
             }
-            int corrected = sum + 'A';
-            toReturn += (char)corrected;
-        }
-        // 10 characters long
-        System.out.println(toReturn);
         return toReturn;
     }
 }

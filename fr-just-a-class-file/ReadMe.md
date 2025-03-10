@@ -5,7 +5,7 @@
 A fellow detective stumbled upon a clue that is hidden behind a QR. You recieve the pdf but then your friend went off a tangent saying something about how he was using **Windows** and never specified if the file was a word or pdf document. Alas the photo made the selfish decision to not open properly and you aren't sure what is causing the behaviour
 
 ## Hints
-1. What does Unix and Windows based system do differently when you write a essay and the next line?
+What does Unix and Windows based system do differently when you write a essay and the next line?
 
 ## Solution
 

@@ -1,14 +1,14 @@
-# Just a Class File
+# Warped QR Code
 
 ## Description
 
-A fellow detective stumbled upon a clue that is hidden behind a java class file. You recieve the file but then your friend went off a tangent saying something about how he was using **Windows** and never specified if the file was a text document or an executable. Alas you are unable to open the file and don't know what to do.
+A fellow detective stumbled upon a clue that is hidden behind a QR. You recieve the pdf but then your friend went off a tangent saying something about how he was using **Windows** and never specified if the file was a word or pdf document. Alas the photo made the selfish decision to not open properly and you aren't sure what is causing the behaviour
 
 ## Hints
-1. What does Unix and Windows based system do differently when you write a essay and how it stores it?
+1. What does Unix and Windows based system do differently when you write a essay and the next line?
 
 ## Solution
 
-Open the class file in a hex editor. You will notice that there is extra bytes added where it is not needed. Mainly for every newline (\n) it has a (\r) preceding it. In hex it is `0D 0A` Simply delete the 0D from the files and win 
+Unix based systems use '\n' to let the program know to create a new line. Windows on the other hands adds a cariage return prior to the \n (\r\n). Windows generally autocorrect itself if it only sees \n and inserts it automatically. So it adds \r before \n when it is not suppose to. 
 
-Note: you can use a java class decompiler but change later so you can't just do a decompiler. 
+Just create a program that removes the \r and the QR code should show itself properly. There are no \r instances in a pdf file so this makes it much easier

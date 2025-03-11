@@ -21,3 +21,6 @@ Printing the values of `real_idx` and `real_salt_idx` will reveal the real indic
 
 Alternatively, we can also load the program into a decompiler (e.g. IDA Pro, Ghidra, Binary Ninja, etc.). Once we have navigated to the `decoy_idx`  and `decoy_salt_idx` variables in memory,
 the `real_idx` and `real_salt_idx` variables can be seen directly below them. Similar to the previous approach, we cross reference these indices with their respective arrays to get the flag.
+
+## Flag
+`cssactf{pwn3d_4_susp3ct_4l1b1_1a3z5q7w}`

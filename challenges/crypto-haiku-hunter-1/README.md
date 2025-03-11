@@ -94,7 +94,7 @@ def xor_decrypt(encrypted, key):
     return decrypted
 
 # Read the encrypted file
-with open("encrypted_note.bin", "rb") as f:
+with open("message.bin", "rb") as f:
     encrypted = f.read()
 
 # Try the key "sameness" from the haiku
@@ -115,7 +115,7 @@ def xor_decrypt(encrypted, key):
     return decrypted
 
 # Read the encrypted file
-with open("files/message.bin", "rb") as f:
+with open("message.bin", "rb") as f:
     encrypted = f.read()
 
 # Try the key "sameness" from the haiku

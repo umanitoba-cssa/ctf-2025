@@ -8,7 +8,7 @@ class WhitespaceToMorse {
     public static void main(String[] args) {
         // read whitespace into morse code
         try {
-            File myObj = new File("output.txt");
+            File myObj = new File("empty_file.txt");
             Scanner myReader = new Scanner(myObj);
             FileWriter writer = new FileWriter("decoded.txt");
             while (myReader.hasNextLine()) {

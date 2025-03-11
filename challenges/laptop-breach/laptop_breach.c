@@ -139,7 +139,7 @@ int calculate_bogus_checksum(char *word) {
 int another_check(char *word, int important_var) {
 	int local_secret = 0x57;
 	for (int i = 0; i < strlen(word); ++i) {
-		local_secret += important_var - 0xc;	
+		local_secret &= important_var - 0xc;	
 		local_secret *= isalnum(word[i]);
 		local_secret &= important_var;
 	}

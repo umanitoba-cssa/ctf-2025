@@ -7,9 +7,9 @@ import java.util.Scanner;
 class Solution {
     public static void main(String[] args) {
         try {
-            File myObj = new File("output2.txt");
+            File myObj = new File("detective_gpt.txt");
             Scanner myReader = new Scanner(myObj);
-            FileWriter writer = new FileWriter("og.txt");
+            FileWriter writer = new FileWriter("solution.txt");
             while (myReader.hasNextLine()) {
                 String msg = myReader.nextLine();
                 // first n-1 are actual message bits encoded in ascii

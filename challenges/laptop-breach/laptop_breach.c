@@ -184,7 +184,7 @@ void check_flag(char *word) {
 
 int main(int argc, char *argv[]) {
 	if (argc != 2) {
-		printf("Usage: ./enter_laptop <password>\n");
+		printf("Usage: ./laptop_breach <password>\n");
 		exit(1);
 	}
 

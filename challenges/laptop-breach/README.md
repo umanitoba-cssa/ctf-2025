@@ -25,3 +25,6 @@ until we get the success flag.
 Alternatively, one can simply locate the array of function pointers in the decompiled program and reverse each one of them. This requires brute
 force and trying each flag until one works, but in some instances this may be an easier solution than simply following the program flow and
 deriving a correct password.
+
+## Flag
+`cssactf{4cce55_gr4nt3d!}`

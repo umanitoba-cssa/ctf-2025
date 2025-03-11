@@ -1,8 +1,16 @@
 # Compacted to Pixel
 
+- Forensics
+- Medium
+- 250 points
+  
 ## Description
 
 The final piece to your puzzle is going through some *very ethical* process of rummiging through the suspects hard drive. One photo that catches your eye is a solitary pixel. I'm sure there is something lurking underneath the pixel 
+
+## Hint
+
+This pixel sure is high maintenance on your hard drive space 
 
 ## Solution
 

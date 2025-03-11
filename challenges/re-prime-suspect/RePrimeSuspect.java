@@ -28,24 +28,24 @@ class RePrimeSuspect {
         int num = 2;
         while (num <= n) {
             int i = 2;
-            boolean isPrime = true;
-            while (i < num && isPrime) {
+            boolean ip = true;
+            while (i < num && ip) {
                 if (num % i == 0) {
-                    isPrime = false;
+                    ip = false;
                 }
                 i++;
                 }
-                if (isPrime) {
+                if (ip) {
                     int counter = 0;
                     while (n >= num && n % num == 0) {
                         counter++;
                         n /= num;
                     }
                     if (counter == 1) {
-                        arr[row][prime_N(58,num)] = 1;
+                        arr[row][findPos(58,num)] = 1;
                     }
                     else if (counter > 1) {
-                        arr[row][prime_N(58,num)] = counter;
+                        arr[row][findPos(58,num)] = counter;
                     }
                 }
                 num++;
@@ -54,7 +54,7 @@ class RePrimeSuspect {
 
     // N how long the loop is to prevent infinite loop. 130 is the max it'll reach
     // Please don't judge me 
-    static int prime_N(int N, int target)
+    static int findPos(int N, int target)
     {
         // Declaring the variables
         int x, y, flg;

@@ -22,7 +22,7 @@ After investigating the third murder scene yesterday, Detective Miller discovere
 
 The journal entry abruptly ends there. Detective Miller believes that by following the killer's knock pattern, she might intercept crucial information about the next victim's location or identity. The department's cyber forensics unit has detected unusual network traffic from what they believe is the killer's command server.
 
-The clock is ticking. Can you help Detective Miller decode the knock sequence and potentially save a life before midnight strikes again? Navigate to the killer's server at running at `<server_ip>`, if you can find your way...
+The clock is ticking. Can you help Detective Miller decode the knock sequence and potentially save a life before midnight strikes again? Navigate to the killer's server running at `<server_ip>`, if you can find your way...
 
 ## Solution
 

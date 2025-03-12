@@ -1,6 +1,6 @@
 services:
   binexp-poison-in-the-wells-2:
-    build: .
+    image: git.ctf.umanitobacssa.ca/cssa/binexp-poison-in-the-wells-2:latest
     container_name: binexp-poison-in-the-wells-2
     ports:
       - "30202:22"

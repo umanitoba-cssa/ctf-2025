@@ -1,7 +1,8 @@
 #!/usr/bin/env bash
 
 cd docker
-docker compose up --build -d
+docker build -t web-hackers-anonymous -t web-hackers-anonymous:latest -t git.ctf.umanitobacssa.ca/cssa/web-hackers-anonymous:latest
+docker compose up -d
 docker compose down
 
 cd ..

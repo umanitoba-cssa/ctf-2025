@@ -15,10 +15,12 @@ FLAG = "cssactf{kn0ck_kn0ck_th3_k1ll3r_w45_h3r3}"
 knock_state = {}
 lock = threading.Lock()
 
-# Clues to provide after each knock
+# Clues to provide after each knock - now with math puzzles
 NEXT_CLUES = [
-    "As you investigate the first location, you find a note: 'Dawn breaks at 5917, when the jogger counts his steps.'",
-    "The second crime scene reveals another message: 'The final secret awaits at 8821, as the church bells ring at dusk.'",
+    "As you investigate the first location, you find a bloodstained note with a puzzle:\n\n'To find where I'll be at dawn, solve this riddle of life and death:\nTake the number of victims found so far,\nMultiply by the length of my knock pattern,\nAdd the product to the number of fingers on both my hands plus one more,\nThen multiply by the square of the first perfect number,\nMultiply by the number of digits in an ASCII value,\nAdd the largest number that is not the sum of any number of distinct squares,\nFinally, subtract the number of lines in this puzzle.'\n\nDetective Miller mumbles, 'This twisted mind thinks murder is just a game...'",
+    
+    "The second crime scene reveals another mathematical message scratched into the wall:\n\n'My final performance requires precision. Find me where:\nThe sum of all single-digit prime numbers,\nMultiplied by the product of the first 3 Fibonacci numbers after 1,\nDivided by the smallest perfect number,\nAdded by the number of letters in \"KNOCK KNOCK KILLER\",\nMultiplied by the ASCII value of 'K',\nAdded by the number whose first two digits are the number of ways to arrange the letters in 'KILL',\nAnd whose last two digits are the number of primes between 1 and 200.'\n\nA chill runs down your spine as you realize time is running out...",
+    
     FLAG  # The final response is the flag itself
 ]
 

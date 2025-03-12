@@ -1,8 +1,8 @@
 # The Knock-Knock Killer
 
-* Revision 0
+* Revision 1
 * Forsenics
-* Easy
+* Medium
 
 ## Description
 
@@ -10,7 +10,7 @@ Idea provided by Rob Guderian (thanks Rob).
 
 The notorious "Knock-Knock Killer" has been terrorizing the city of Ravenholm for months, leaving a trail of precisely arranged crime scenes and cryptic messages. Detective Sarah Miller has been tracking this methodical serial killer across three brutal murders, growing increasingly desperate as the pattern suggests a fourth victim is imminent.
 
-Each victim was found in a carefully staged tableau, with peculiar marks on door frames suggesting the killer announces their presence with a specific sequence of knocks before entering. Neighbors have reported hearing these distinctive knocks, but never in their entirety.
+Each victim was found in a carefully staged tableau, with peculiar marks on door frames suggesting the killer announces their presence with a specific sequence of knocks before entering. Neighbors have reported hearing four knocks at a time, but they aren't sure what happened next.
 
 After investigating the third murder scene yesterday, Detective Miller discovered a weathered leather-bound journal hidden beneath a floorboard. The journal appears to belong to the killer and contains this chilling entry written in meticulous handwriting:
 
@@ -26,12 +26,41 @@ The clock is ticking. Can you help Detective Miller decode the knock sequence an
 
 ## Solution
 
-This challenge implements a sequential port knocking mechanism where each correct knock reveals the next port in the sequence. Unlike traditional port knocking where all ports must be known in advance, this version requires players to discover ports one at a time.
+This challenge implements a sequential port knocking mechanism where each correct knock reveals a mathematical puzzle that must be solved to determine the next port in the sequence.
 
 ### Analysis:
 1. The description reveals the first port to knock on: 3712
-2. Each successful knock returns a message containing the next port to try
+2. Each successful knock returns a mathematical puzzle that must be solved to discover the next port
 3. The final knock returns the flag
+
+### Mathematical Puzzle Solutions:
+
+#### First Knock (3712):
+The first port is revealed directly in the killer's journal entry.
+
+#### Second Knock (5917) - Solution to first puzzle:
+The puzzle requires these steps:
+1. Take the number of victims found so far (3)
+2. Multiply by the killer's knock pattern length (4): 3 × 4 = 12
+3. Add the product to fingers on both hands plus one more (11): 12 + 11 = 23
+4. Multiply by the square of the first perfect number (6²): 23 × 36 = 828
+5. Multiply by the number of digits in an ASCII value (7): 828 × 7 = 5796
+6. Add the largest number that is not the sum of any number of distinct squares (128): 5796 + 128 = 5924
+7. Subtract the number of lines in the puzzle (7): 5924 - 7 = 5917
+
+This gives us port 5917.
+
+#### Final Knock (8821) - Solution to second puzzle:
+The puzzle requires these steps:
+1. Sum of all single-digit prime numbers (2+3+5+7) = 17
+2. Multiply by the product of first 3 Fibonacci numbers after 1 (2×3×5) = 17 × 30 = 510
+3. Divide by the smallest perfect number (6) = 510 ÷ 6 = 85
+4. Add the number of letters in "KNOCK KNOCK KILLER" (16) = 85 + 16 = 101
+6. Multiply by the ASCII value of 'K' (75) = 101 × 75 = 7575
+7. Add the number whose first two digits are the number of different ways to arrange the letters in "KILL" (12) = 7575 + 1200 = 8775
+8. Add the number of primes between 1 and 200 (46) = 8775 + 46 = 8821
+
+This gives us port 8821.
 
 ### Step-by-step Solution:
 
@@ -43,102 +72,29 @@ This challenge implements a sequential port knocking mechanism where each correc
    nc -u <server_ip> 3712
    ```
    
-   Response: "As you investigate the first location, you find a note: 'Dawn breaks at 5917, when the jogger counts his steps.'"
+   This returns a mathematical puzzle.
 
-2. **Second Knock - Following the Trail**:
-   The response from the first knock indicates that the next port is 5917.
+2. **Second Knock - Solving the First Puzzle**:
+   Solve the mathematical puzzle to discover that the next port is 5917.
 
    ```bash
-   # Second knock - discovered from the first knock's response
+   # Second knock - discovered by solving the first puzzle
    nc -u <server_ip> 5917
    ```
    
-   Response: "The second crime scene reveals another message: 'The final secret awaits at 8821, as the church bells ring at dusk.'"
+   This returns another mathematical puzzle.
 
-3. **Final Knock - Uncovering the Truth**:
-   The second knock reveals the final port: 8821.
+3. **Final Knock - Solving the Second Puzzle**:
+   Solve the second mathematical puzzle to discover that the final port is 8821.
 
    ```bash
-   # Final knock - discovered from the second knock's response
+   # Final knock - discovered by solving the second puzzle
    nc -u <server_ip> 8821
    ```
    
    Response: The flag `cssactf{kn0ck_kn0ck_th3_k1ll3r_w45_h3r3}`
 
-### Python Solution Script:
-```python
-import socket
-import time
-
-def send_knock(ip, port):
-    """Send a UDP knock to the specified port and return the response"""
-    sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.settimeout(5)
-    
-    print(f"Knocking on port {port}...")
-    sock.sendto(b"knock", (ip, port))
-    
-    try:
-        data, _ = sock.recvfrom(1024)
-        response = data.decode()
-        print(f"Response: {response}")
-        return response
-    except socket.timeout:
-        print("No response received (timeout)")
-        return None
-    finally:
-        sock.close()
-
-def follow_the_trail(ip, first_port):
-    """Follow the trail of ports by knocking sequentially"""
-    current_port = first_port
-    
-    # First knock
-    response = send_knock(ip, current_port)
-    if not response:
-        print("Investigation failed at the first location")
-        return
-    
-    # Extract second port from response (5917 from the clue)
-    if "5917" in response:
-        current_port = 5917
-    else:
-        print("Failed to find next port in the response")
-        return
-    
-    time.sleep(1)  # Brief pause between knocks
-    
-    # Second knock
-    response = send_knock(ip, current_port)
-    if not response:
-        print("Investigation failed at the second location")
-        return
-    
-    # Extract third port from response (8821 from the clue)
-    if "8821" in response:
-        current_port = 8821
-    else:
-        print("Failed to find final port in the response")
-        return
-    
-    time.sleep(1)  # Brief pause between knocks
-    
-    # Final knock
-    response = send_knock(ip, current_port)
-    if not response:
-        print("Investigation failed at the final location")
-        return
-    
-    print("\nInvestigation complete!")
-    if "cssactf{" in response:
-        print(f"Flag found: {response}")
-
-if __name__ == "__main__":
-    server_ip = input("Enter the server IP: ")
-    follow_the_trail(server_ip, 3712)
-```
-
-If any knock is performed out of sequence or on an incorrect port, the server responds with an error message and resets the sequence, requiring the player to start over from the first port.
+Note: The server internally implements a 30 second timeout. If the timeout is exceeded, the player will have to restart from the first port, but the riddles stay the same.
 
 ## Flag
 

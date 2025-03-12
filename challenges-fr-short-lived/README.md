@@ -6,7 +6,7 @@
 
 ## Description
 
-Bandits really just stopped caring about being annoymous huh. He looks like someone who is *always* hiding something and can't keep to himself. See if you can spot a way for him to cough up the evidence and wipe off that smirk.
+Hey its a mugshot, I wonder what he could be hiding?
 
 ## Solution
 

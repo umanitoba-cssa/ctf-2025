@@ -1,0 +1,7 @@
+code/bin/
+code/obj/
+
+docker/bin/
+
+files/client.c
+files/distribution.zip

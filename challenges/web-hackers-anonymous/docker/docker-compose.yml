@@ -1,0 +1,9 @@
+services:
+    web-hackers-anonymous:
+        container_name: web-hackers-anonymous
+        build:
+            context: .
+            dockerfile: Dockerfile
+        restart: always
+        ports:
+            - "30401:30401"

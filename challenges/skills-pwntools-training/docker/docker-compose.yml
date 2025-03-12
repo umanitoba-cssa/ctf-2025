@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  skills-pwntools-training:
+    build: .
+    container_name: skills-pwntools-training
+    ports:
+      - "10101:22"
+    restart: unless-stopped

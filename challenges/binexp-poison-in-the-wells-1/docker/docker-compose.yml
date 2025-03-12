@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  binexp-poison-in-the-wells-1:
+    build: .
+    container_name: binexp-poison-in-the-wells-1
+    ports:
+      - "30201:22"
+    restart: unless-stopped

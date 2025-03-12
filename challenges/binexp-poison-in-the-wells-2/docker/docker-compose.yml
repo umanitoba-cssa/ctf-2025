@@ -1,0 +1,9 @@
+services:
+  binexp-poison-in-the-wells-2:
+    build: .
+    container_name: binexp-poison-in-the-wells-2
+    ports:
+      - "30202:22"
+    restart: unless-stopped
+    # security_opt:
+    #   - seccomp:seccomp.json  # Enable syscall restrictions

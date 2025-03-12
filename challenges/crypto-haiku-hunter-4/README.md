@@ -1,6 +1,6 @@
 # Haiku Hunter - The Final Riddle
 
-* Revision 0
+* Revision 1
 * Cryptography
 * Hard
 
@@ -8,13 +8,13 @@
 
 The Haiku Hunter's reign of terror is nearing its climax! A senior cryptographer was found dead in a locked room with only a computer displaying an encrypted file and a final haiku:
 
-    Armor shields the truth
+    Advanced standard hides
     Words wear masks of other words
-    First keys hide the last
+    Last bytes must be found
 
-The computer contains an encrypted file and a peculiar document titled "cipher.txt" that appears to be a translation dictionary of some kind - each line contains a common English word. There's also a sticky note with the number "1337" written on it.
+The computer contains an encrypted file and a peculiar document titled "cipher.txt" that appears to be a translation dictionary of some kind - each line contains a common English word. There's also a sticky note with "1337" written on it, followed by "Partial key only! Last 16-bits missing."
 
-Forensics revealed that the victim was working on advanced cryptographic algorithms. Their recent browser history shows research on military-grade encryption standards and ancient substitution techniques.
+Forensics revealed that the victim was working on advanced cryptographic algorithms. Their recent browser history shows research on AES encryption, SHA-256 hashing algorithms, and classical substitution techniques. A notepad was found with scribbled notes: "CBC mode... use words as byte values... hash the seed..."
 
 This could be our last chance to stop the Haiku Hunter before their "masterpiece" is complete. Decrypt the message and end this nightmare once and for all.
 
@@ -23,9 +23,14 @@ This could be our last chance to stop the Haiku Hunter before their "masterpiece
 This challenge combines two advanced obfuscation techniques: AES encryption and a Jargon translation table.
 
 The haiku provides key clues:
-* "Armor shields the truth" - Refers to AES (Advanced Encryption Standard), commonly used by military/defense
+* "Advanced standard hides" - Directly references AES (Advanced Encryption Standard)
 * "Words wear masks of other words" - Hints at the translation table (Jargon method)
-* "First keys hide the last" - Suggests that part of the AES key is hidden and must be brute-forced
+* "Last bytes must be found" - Tells us that part of the key must be brute-forced
+
+The forensic details provide additional information:
+* References to SHA-256 indicate the hashing algorithm used for key generation
+* "CBC mode" indicates the AES mode
+* The sticky note with "1337" and mention of missing 16-bits clearly points to a partial key that requires bruteforcing the last two bytes
 
 The solution requires multiple steps:
 

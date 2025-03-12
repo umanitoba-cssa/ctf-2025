@@ -11,7 +11,6 @@ class RePrimeSuspect {
             System.out.println("Enter ONLY 12 characters or less");
             System.exit(1);
         }
-        //CSSAHostsCTF
         String target = "IFBAABCCAAAAAABA";
         String str = args[0];
         for (int i = 0; i < str.length(); i++) {
@@ -52,7 +51,6 @@ class RePrimeSuspect {
         }
     }
 
-    // N how long the loop is to prevent infinite loop. 130 is the max it'll reach
     // Please don't judge me 
     static int findPos(int N, int target)
     {

@@ -6,6 +6,8 @@
 
 ## Description
 
+Idea provided by Rob Guderian (thanks Rob).
+
 The notorious "Knock-Knock Killer" has been terrorizing the city of Ravenholm for months, leaving a trail of precisely arranged crime scenes and cryptic messages. Detective Sarah Miller has been tracking this methodical serial killer across three brutal murders, growing increasingly desperate as the pattern suggests a fourth victim is imminent.
 
 Each victim was found in a carefully staged tableau, with peculiar marks on door frames suggesting the killer announces their presence with a specific sequence of knocks before entering. Neighbors have reported hearing these distinctive knocks, but never in their entirety.
@@ -20,9 +22,7 @@ After investigating the third murder scene yesterday, Detective Miller discovere
 
 The journal entry abruptly ends there. Detective Miller believes that by following the killer's knock pattern, she might intercept crucial information about the next victim's location or identity. The department's cyber forensics unit has detected unusual network traffic from what they believe is the killer's command server.
 
-The clock is ticking. Can you help Detective Miller decode the knock sequence and potentially save a life before midnight strikes again?
-
-The killer's server is running at `<server_ip>`. Your first step is clear - investigate port 3712. What secrets will it reveal?
+The clock is ticking. Can you help Detective Miller decode the knock sequence and potentially save a life before midnight strikes again? Navigate to the killer's server at running at `<server_ip>`, if you can find your way...
 
 ## Solution
 

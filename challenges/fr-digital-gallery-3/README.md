@@ -1,6 +1,7 @@
 # John's Digital Gallery 3
 - Revision 0
 - Forensics
+- Easy
 
 ## Description
 Detective! We've received an anonymous tip about the existence of a suspicious establishment called John's Digital Gallery. After investigating, we've recovered several suspicious pictures that seemed to have been tampered with, but we couldn't find any further evidence. Perhaps you could lend us your insight?

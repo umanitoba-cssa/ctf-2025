@@ -1,6 +1,7 @@
 # Parity the Platypus
 - Revision 0
 - Cryptography
+- Easy
 
 ## Description
 Dear Detective,

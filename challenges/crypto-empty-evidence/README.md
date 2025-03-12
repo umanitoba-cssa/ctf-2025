@@ -1,6 +1,7 @@
 # Empty Evidence
 - Revision 0
 - Cryptography
+- Easy
 
 ## Description
 You receive a strange email with a file attached. To your dismay, you see that it contains nothing. However, you notice that, suspiciously, there are 34 lines. Perhaps this wasn't just a sick prank after all? Follow this empty trail to get to the answer.

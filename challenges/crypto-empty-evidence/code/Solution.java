@@ -4,11 +4,11 @@ import java.io.FileWriter;
 import java.io.IOException;
 import java.util.Scanner; // Import the Scanner class to read text files
 
-class WhitespaceToMorse {
+class Solution {
     public static void main(String[] args) {
         // read whitespace into morse code
         try {
-            File myObj = new File("empty_file.txt");
+            File myObj = new File("evidence_ZW1wdHk=.txt");
             Scanner myReader = new Scanner(myObj);
             FileWriter writer = new FileWriter("decoded.txt");
             while (myReader.hasNextLine()) {

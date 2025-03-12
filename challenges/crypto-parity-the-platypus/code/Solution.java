@@ -7,7 +7,7 @@ import java.util.Scanner;
 class Solution {
     public static void main(String[] args) {
         try {
-            File myObj = new File("detective_gpt.txt");
+            File myObj = new File("evidence_cGFyaXR5.txt");
             Scanner myReader = new Scanner(myObj);
             FileWriter writer = new FileWriter("solution.txt");
             while (myReader.hasNextLine()) {

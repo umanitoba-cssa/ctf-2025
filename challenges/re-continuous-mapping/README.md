@@ -18,4 +18,6 @@ And the amount of the letters that goes through follows a simple modular system 
 
 Your password can't have the same character as the output in the same position. And this is an issue for P as it is a triangle. So you simply start at D to resolve it
 
-The password is `AJODLGHSIQ`
+## Flag 
+
+`cssactf{AJODLGHSIQ}`

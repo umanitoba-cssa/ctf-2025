@@ -9,7 +9,7 @@ class RePrimeSuspect {
             System.out.println("Enter ONLY 12 characters or less");
             System.exit(1);
         }
-        if (args[0].contains("B")) 
+        if (args[0].contains("A")) 
         {
             System.out.println("Enter no A's");
             System.exit(1);     

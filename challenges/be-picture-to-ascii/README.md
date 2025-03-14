@@ -3,7 +3,7 @@
 - Binary Exploitation
 
 ## Description
-You stumble upon a program that converts any image into ASCII art. Part of the implementation takes into account the **luminance** of a pixel which is calculated as $r * 0.2126 + g * 0.7152 + b * 0.0722$ where r, g, b are the respective rgb components. You **round up** each weighted colour component before adding them up. You also don't want to luminate every pixel so if the red > 250 and green > 250 and blue > 240. It's considered bright enough to not need to run the luminance formula.
+You stumble upon a program that converts any image into ASCII art. Part of the implementation takes into account the **luminance** of a pixel which is calculated as $r * 0.2126 + g * 0.7152 + b * 0.0722$ where r, g, b are the respective rgb components. You **round up** each weighted colour component before adding them up. This is done to as to find the appropiate greyscale value. You also don't want to luminate every pixel so if the red > 250 and green > 250 and blue > 240. It's considered bright enough to not need to run the luminance formula.
 
 This program runs its own executable so you will have to check if you downloaded the correct version. Currently only Mac (or unix) works but will add for Windows and Linux soon.
 

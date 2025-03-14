@@ -1,5 +1,9 @@
 # Continious Mapping
 
+- Reverse Engineering
+- Medium
+- 200 points
+  
 ## Description
 
 The suspect got leaked slides from Comp1020 and learned about interfaces and seperate compilation. Doesn't mean its a good job
@@ -13,3 +17,5 @@ There are two components, one is a cycle and another is a K3 and letters branchi
 And the amount of the letters that goes through follows a simple modular system and should be fairly straighforward. (there is a off by one error that I was too lazy to resolve)
 
 Your password can't have the same character as the output in the same position. And this is an issue for P as it is a triangle. So you simply start at D to resolve it
+
+The password is `AJODLGHSIQ`

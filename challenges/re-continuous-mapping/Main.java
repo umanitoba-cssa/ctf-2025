@@ -29,17 +29,15 @@ public class Main {
         }
 
         String transformed = "";
-        String Target = "CGUPPMMCMI";
+        String Target = "CFPPNLSWPR";
         for (int i = 0; i < key.length(); i++) {
             if (key.charAt(i) == Target.charAt(i)) {
                 System.out.println("false");
-                //return;
+                return;
             }
             int o = key.length() % (i+1);
             transformed += map(key.charAt(i), o);
-            System.out.println(o);
         }
-        System.out.println(transformed);
         if (transformed.equals(Target)) {
             System.out.println("true");
         } else {

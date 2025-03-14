@@ -10,4 +10,7 @@ You begin your detective career and your first case is deciphering a communicati
 
 ## Solution
 
-The program assigns each letter to the first occurance in the script (A -> A, B -> C, C ->O). The key is "ReadTheBeeMovie". 
+The program assigns each letter to the first occurance in the script (A -> A, B -> C, C ->O). The key is 
+
+## Flag 
+`cssactf{ReadTheBeeMovie}` 

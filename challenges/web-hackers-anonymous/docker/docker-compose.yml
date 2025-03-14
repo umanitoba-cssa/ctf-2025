@@ -1,0 +1,7 @@
+services:
+    web-hackers-anonymous:
+        container_name: web-hackers-anonymous
+        image: git.ctf.umanitobacssa.ca/cssa/web-hackers-anonymous:latest
+        restart: always
+        ports:
+            - "30401:30401"

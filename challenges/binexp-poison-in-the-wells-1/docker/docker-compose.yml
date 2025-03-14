@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  binexp-poison-in-the-wells-1:
+    image: git.ctf.umanitobacssa.ca/cssa/binexp-poison-in-the-wells-1:latest
+    container_name: binexp-poison-in-the-wells-1
+    ports:
+      - "30201:22"
+    restart: unless-stopped

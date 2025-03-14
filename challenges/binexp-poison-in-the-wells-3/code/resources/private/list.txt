@@ -1,0 +1,17 @@
+Business Name                   Registration #      Date Registered     Jurisdiction                            Status
+Jones, Johnson and Woodard      40768979-59         2017-01-28          Williamtown, New Zealand                Revoked
+Northbridge Technologies        52834761-22         2020-08-18          East Hills, Canada                      Active
+Glacier Media Group             54930218-12         2019-09-10          Victoria, Canada                        Active
+Green-Singh                     55402226-50         2018-03-07          Ronaldberg, United Kingdom              Dissolved
+Price Group                     56287825-68         2023-05-31          Dianamouth, Andorra                     Dissolved
+Luxewood Corporation            58148512-34         2024-11-28          Richmond, BC                            Revoked
+Huynh-Gray                      61152052-34         2020-10-15          South Jane, Suriname                    Active
+Chariot Logistics               63249170-63         2018-05-09          Harbour Town, New Zealand               Revoked
+Cross, Hall and Maynard         64713097-80         2021-04-08          Catherinefort, Norway                   Inactive
+Oakes & Thompson Construction   73420198-16         2017-06-21          Brighton, UK                            Inactive
+Amethyst Enterprises            76540127-41         2014-04-25          Hillsborough, USA                       Inactive
+Porter-Lester                   81070966-29         2015-11-27          North Benjaminchester, Liechtenstein    Revoked
+Sentinel Solutions              86743059-34         2016-12-03          Summit Valley, Australia                Active
+Barrow Innovations              92837456-98         2014-11-19          Clearview, United States                Dissolved
+Norris Ltd                      93081062-31         2017-02-25          Port Mistyshire, Bahrain                Revoked
+Young-Ayers                     96601107-69         2015-07-15          West Michelle, Reunion                  Active

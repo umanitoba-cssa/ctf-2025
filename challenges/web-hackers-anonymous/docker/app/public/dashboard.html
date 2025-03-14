@@ -1,0 +1,68 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body x-data="dashboard_data" class="bg-black text-lime-400 font-mono">
+    <div class="flex flex-col items-center gap-8">
+        <div class="flex flex-col items-center justify-center py-8 gap-2">
+            <h1 class="text-3xl font-bold underline">
+                <a href="/index.html">
+                    hackers anonymous
+                </a>
+            </h1>
+            <div class="flex flex-row gap-4">
+                <a href="/api/logout">
+                    [logout]
+                </a>
+            </div>
+            <p x-show="username" style="display:none">welcome <span x-text="username"></span></p>
+        </div>
+
+        <div x-show="!username">loading</div>
+        <div x-show="username" style="display:none">
+            <div class="flex flex-col gap-4 items-center align-middle">
+                <div class="flex flex-col gap-2 px-12">
+                    <h2>jobs requested of you</h2>
+                    <div class="grid grid-cols-3 gap-4">
+                        <template x-for="job in jobs" :key="job.id">
+                            <div class="border border-lime-400 p-4 flex flex-col gap-2 justify-center">
+                                <h3 class="underline font-extrabold" x-text="job.title"></h3>
+                                <p class="text-white" x-text="job.details"></p>
+                                <p>contact: <span class="break-words text-purple-400" x-text="job.contact"></span></p>
+                            </div>
+                        </template>
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('dashboard_data', () => ({
+                username: '',
+                jobs: [],
+                async init() {
+                    let response = await fetch('/api/checkuser')
+                    const username = await response.text()
+
+                    response = await fetch('/api/jobs')
+                    const jobs = await response.json()
+
+                    this.jobs = jobs
+                    this.username = username
+                }
+            }));
+        });
+    </script>
+</body>
+
+</html>

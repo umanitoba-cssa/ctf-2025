@@ -1,0 +1,86 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-black text-lime-400 font-mono">
+    <script>
+        function getCookie(name) {
+            const value = `; ${document.cookie}`;
+            const parts = value.split(`; ${name}=`);
+            if (parts.length === 2) return decodeURI(parts.pop().split(';').shift());
+        }
+    </script>
+    <div class="flex flex-col items-center gap-8">
+        <div class="flex flex-col items-center justify-center py-8 gap-2">
+            <h1 class="text-3xl font-bold underline">
+                <a href="/index.html">
+                    hackers anonymous
+                </a>
+            </h1>
+            <div class="flex flex-row gap-4">
+                <a href="/login.html">
+                    [login]
+                </a>
+                <a href="/register.html">
+                    [register]
+                </a>
+            </div>
+        </div>
+
+        <div class="border border-lime-400 w-fit p-8">
+            <div class="flex flex-col items-center align-middle gap-4">
+                <h2 class="text-xl text-center">
+                    login
+                </h2>
+                <form action="/api/login" method="post">
+                    <div class="max-w-96 grid grid-cols-2 gap-2">
+                        <label for="username">username</label>
+                        <input class="border border-white" id="username" name="username" type="text" required>
+                        <label for="passowrd">password</label>
+                        <input class="border border-white" id="password" name="password" type="password">
+                        <button type="submit" name="action" value="login" class="bg-lime-400 text-black hover:bg-white hover:cursor-pointer col-span-2" type="submit">
+                            login
+                        </button>
+                        <button type="submit" name="action" value="recover" class="border border-lime-400 hover:bg-white hvoer:text-black font-extrabold text-center hover:cursor-pointer col-span-2" type="submit">
+                            recover account
+                        </button>
+                        <div x-data="login_data" x-show="error" class="col-span-2 text-red-500 text-center" style="display:none">
+                            <div x-text="error"></div>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('login_data', () => ({
+                error: '',
+                init() {
+                    function getCookie(name) {
+                        const value = `; ${document.cookie}`;
+                        const parts = value.split(`; ${name}=`);
+                        if (parts.length === 2) return decodeURI(parts.pop().split(';').shift());
+                    }
+
+                    function setCookie(name, value) {
+                        document.cookie = `${name}=${value}; path=/`;
+                    }
+
+                    this.error = getCookie('error');
+
+                    setCookie('error', '');
+                }
+            }));
+        });
+    </script>
+</body>
+
+</html>

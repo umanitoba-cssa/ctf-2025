@@ -1,0 +1,31 @@
+@import "tailwindcss";
+/* 
+:not(h1) > a {
+    @apply text-purple-400 hover:text-black hover:bg-white;
+}
+
+@theme {
+    --drop-shadow-3xl: 0 0 60px rgb(154, 230, 1); 
+} */
+
+@theme {
+    --font-vietnam: "Be Vietnam Pro", "sans-serif";
+}
+
+@layer utilities {
+    .mask-gradient {
+        -webkit-mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 60%, rgba(0, 0, 0, 0) 100%);
+        mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 40%);
+    }
+
+    .text-shadow {
+        text-shadow:
+        2px 2px 2px red,
+        0 0 1em #111111,
+        0 0 0.2em #111111;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
+}

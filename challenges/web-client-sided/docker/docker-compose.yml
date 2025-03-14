@@ -1,0 +1,7 @@
+services:
+    web-client-sided:
+        container_name: web-client-sided
+        image: git.ctf.umanitobacssa.ca/cssa/web-client-sided:latest
+        restart: always
+        ports:
+            - "30404:30404"

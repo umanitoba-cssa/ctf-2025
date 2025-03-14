@@ -1,0 +1,98 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-slate-300 font-vietnam flex flex-col items-center justify-center align-middle w-screen h-screen">
+    <div class="w-[500px] flex flex-col items-center align-middle p-4 gap-4">
+        <h2>Enter Password</h2>
+        <form onsubmit="event.preventDefault(); window.checkPassword();" class="w-full">
+            <input type="text" id="password" class="bg-gray-800 text-slate-300 border border-gray-700 rounded-lg p-2 w-full" />
+        </form>
+    </div>
+    <div class="hidden">
+        Hello operative. We have a new package for you to collect: <span id="secret-message"></span>
+    </div>
+    <script>
+        window.checkPassword = () => {
+            let password = document.getElementById("password").value;
+
+            let substitution = {
+                'r': 'b',
+                '!': '@',
+                'z': 'N',
+                '$': 'B',
+                'h': 't',
+                '1': '7',
+                'b': '-',
+                '#': 'K',
+                'd': 'a',
+                'c': 's',
+                'k': 'E',
+                '~': '5',
+                '8': '}',
+                'm': '8',
+                '*': 'H',
+                '^': 'D',
+                'p': '#',
+                's': 'u',
+                'q': '6',
+                '7': '{',
+                '$': '3',
+                'v': '0',
+                '4': 'f',
+                'g': 'c',
+                '%': 'n',
+                'j': 'A',
+            };
+
+            try {
+                console.log('1')
+                if (password.substring(16, 20) == '1pkb') {
+                    console.log('2')
+                    if (password.substring(4, 8) == 'gh47') {
+                        console.log('3')
+                        if (password.substring(28, 32) == '~qgr') {
+                            console.log('4')
+                            if (password.substring(20, 24) == '$!g#') {
+                                console.log('5')
+                                if (password.substring(8, 12) == 'js1*') {
+                                    console.log('6')
+                                    if(password.substring(0, 4) == 'gccd') {
+                                        console.log('7')
+                                        if(password.substring(32, 36) == 'mdq8') {
+                                            console.log('8')
+                                            if (password.substring(12, 16) == 'bvzb') {
+                                                if (password.substring(24, 28) == '$%^b') {
+                                                    console.log('9')
+                                                    str = ''
+                                                    for (let letter of password) {
+                                                        str += substitution[letter]
+                                                    }
+
+                                                    document.getElementById("secret-message").innerText = str;
+                                                    document.querySelector('.hidden').classList.remove('hidden');
+                                                }
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            } catch (e) {
+                console.error(e);
+            }
+        }
+    </script>
+</body>
+
+</html>

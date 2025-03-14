@@ -1,0 +1,9 @@
+@import "tailwindcss";
+
+:not(h1) > a {
+    @apply text-purple-400 hover:text-black hover:bg-white;
+}
+
+@theme {
+    --drop-shadow-3xl: 0 0 60px rgb(154, 230, 1); 
+}

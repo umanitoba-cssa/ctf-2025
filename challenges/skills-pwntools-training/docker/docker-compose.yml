@@ -1,0 +1,9 @@
+version: "3.8"
+
+services:
+  skills-pwntools-training:
+    image: git.ctf.umanitobacssa.ca/cssa/skills-pwntools-training:latest
+    container_name: skills-pwntools-training
+    ports:
+      - "10101:22"
+    restart: unless-stopped

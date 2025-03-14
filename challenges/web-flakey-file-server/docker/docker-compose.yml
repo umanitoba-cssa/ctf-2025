@@ -1,0 +1,7 @@
+services:
+    web-flakey-file-server:
+        container_name: web-flakey-file-server
+        image: git.ctf.umanitobacssa.ca/cssa/web-flakey-file-server:latest
+        restart: always
+        ports:
+            - "30403:30403"

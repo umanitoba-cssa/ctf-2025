@@ -1,0 +1,129 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <script src="//unpkg.com/alpinejs" defer></script>
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body x-data="chat" class="bg-gray-900 text-slate-300 font-vietnam flex flex-col items-center align-middle h-screen max-h-screen">
+
+    <div x-show="needAuthentication" class="flex flex-col justify-center align-middle items-center h-screen gap-4 p-8" style="display:none;">
+        <h2 class="text-white text-4xl font-bold">Not signed in</h2>
+        <p class="text-slate text-center">Please sign in to view your conversations</p>
+        <div class="flex flex-row items-center align-middle gap-8">
+            <a href="/login.html" class="border border-purple-600 bg-stone-950 hover:bg-stone-800 hover:border-slate-300 transition-all text-white py-2 px-4 rounded-md">
+                Login
+            </a>
+            <a href="/register.html" class="bg-purple-600 hover:bg-purple-500 border border-transparent hover:border-slate-300 transition-all text-white py-2 px-4 rounded-md">
+                Sign Up
+            </a>
+        </div>
+    </div>
+    <div x-show="currentUser !== -1" class="flex flex-row grow w-screen" style="display:none;">
+        <div class="border-r border-slate-300 h-full w-1/4 max-w-[300px] min-w-[200px] flex flex-col justify-between bg-slate-950">
+            <div>
+                <div class="p-4 border-b border-slate-300">
+                    <div class="flex flex-row justify-center align-middle items-center gap-2">
+                        <div class="text-purple-400">
+                            <svg class="w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z"/></svg>
+                        </div>
+                        <span class="text-xl font-bold text-white">
+                            VeilChat
+                        </span>
+                    </div>
+                </div>
+                <div class="text-slate-600 p-4">Conversations</div>
+                <template x-for="convo in conversations" :key="convo.id">
+                    <div @click="loadConversation(convo.id)" class="p-4 cursor-pointer hover:bg-slate-800" :class="{ 'bg-slate-800': convo.id === selectedConversation }">
+                        <span x-text="convo.other_user"></span>
+                    </div>
+                </template>
+            </div>
+            <div class="flex flex-col gap-4 p-4 border-t border-slate-300">
+                <div class="font-bold">
+                    Welcome <span x-text="currentUser"></span>
+                </div>
+                <a href="/api/logout" class="border border-purple-600 hover:bg-stone-800 hover:border-slate-300 transition-all text-white py-2 px-4 rounded-md">
+                    Sign Out
+                </a>
+            </div>
+        </div>
+        <div class="w-full h-full flex flex-col">
+            <div x-show="selectedConversation === -1" class="flex flex-col justify-center align-middle items-center gap-4 p-8 grow">
+                <h2 class="text-white text-4xl font-bold">Welcome to VeilChat</h2>
+                <p class="text-slate text-center">Select a conversation to view messages</p>
+            </div>
+            <div x-show="selectedConversation !== -1" class="flex flex-col justify-between grow p-8">
+                <div>
+                    <template x-for="message in messages" :key="message.id">
+                        <div>
+                            <div x-show="message.is_self">
+                                <div class="flex flex-row-reverse">
+                                    <div class="bg-purple-600 text-white p-2 m-2 rounded-md">
+                                        <span x-text="message.content"></span>
+                                    </div>
+                                </div>
+                            </div>
+        
+                            <div x-show="!message.is_self">
+                                <div class="flex flex-row">
+                                    <div class="bg-slate-800 text-white p-2 m-2 rounded-md">
+                                        <span x-text="message.content"></span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </template>
+                </div>
+                <div>
+                    <div class="flex flex-row gap-4">
+                        <input type="hidden" name="conversation_id" x-model="selectedConversation">
+                        <input disabled type="text" name="content" class="flex-grow p-2 rounded-md bg-slate-800 text-white border border-slate-300" placeholder="Sorry, messaging is disabled during the maintenance period">
+                        <button disabled class="bg-purple-600/50 border border-transparent transition-all text-slate-400 py-2 px-4 rounded-md">
+                            Send
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('alpine:init', () => {
+            Alpine.data('chat', () => ({
+                needAuthentication: false,
+                currentUser: -1,
+                selectedConversation: -1,
+                conversations: [],
+                messages: [],
+                async init() {
+                    let response = await fetch('/api/currentuser')
+
+                    if (response.status === 401) {
+                        this.needAuthentication = true
+                        return
+                    }
+
+                    this.currentUser = await response.text()
+
+                    response = await fetch('/api/conversations')
+                    this.conversations = await response.json()
+                },
+                async loadConversation(conversationId) {
+                    let response = await fetch(`/api/conversations/${conversationId}`)
+                    this.messages = await response.json()
+                    this.selectedConversation = conversationId
+                },
+            }));
+        });
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Be+Vietnam+Pro:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap" rel="stylesheet">
+    <link href="./output.css" rel="stylesheet">
+</head>
+
+<body class="bg-gray-900 text-slate-300 font-vietnam flex flex-col items-center align-middle">
+    <!--@TODO -->
+    
+    <!-- We can do some stuff for better UX here. -->
+    <!-- > When the user hits this login page, we should check if there's already a cookie named 'session' -->
+    <!-- > If there is, we should call a backend api endpoint to check if they are already logged in -->
+    <!-- > this would compare the value of the session cookie with the session_token attribute for the user in the database -->
+    <!-- > If it matches, they are already logged in and don't need to enter their password. -->
+    <!-- > At that point we should redirect them to the chat page at /chat.html -->
+    <div class="flex flex-col justify-center align-middle text-center p-2 w-screen text-sm bg-red-600 text-white">
+        <span class="font-bold inline">IMPORTANT: </span>
+        <span class="inline">VeilChat is undergoing maintenance from March 14 2025 00:00 CT to March 16 2025 00:00 CT. During this time you will not be able to login, register, or send messages. If you are already signed in, you will be able to view your conversation history. We apologize for any inconvenience this may cause.</span>
+    </div>
+
+    <div class="flex flex-col items-center justify-center gap-32 container">
+        <div class="w-full flex flex-row justify-between p-4 items-center">
+            <a href="/" class="flex flex-row justify-center align-middle items-center gap-2">
+                <div class="text-purple-400">
+                    <svg class="w-8" fill="currentColor" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--!Font Awesome Free 6.7.2 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2025 Fonticons, Inc.--><path d="M144 144l0 48 160 0 0-48c0-44.2-35.8-80-80-80s-80 35.8-80 80zM80 192l0-48C80 64.5 144.5 0 224 0s144 64.5 144 144l0 48 16 0c35.3 0 64 28.7 64 64l0 192c0 35.3-28.7 64-64 64L64 512c-35.3 0-64-28.7-64-64L0 256c0-35.3 28.7-64 64-64l16 0z"/></svg>
+                </div>
+                <span class="text-xl font-bold text-white">
+                    VeilChat
+                </span>
+            </a>
+            <div class="flex flex-row items-center align-middle gap-8">
+                <a href="/#features" class="hover:text-white hover:underline">Features</a>
+                <a href="/#team" class="hover:text-white hover:underline">Our Team</a>
+            </div>
+            <div class="flex flex-row items-center align-middle gap-8">
+                <a href="/login.html" class="py-2 px-4 rounded-md hover:text-white hover:underline">
+                    Login
+                </a>
+                <a href="/register.html" class="bg-purple-600 hover:bg-purple-500 border border-transparent hover:border-slate-300 transition-all text-white py-2 px-4 rounded-md">
+                    Sign Up
+                </a>
+            </div>
+        </div>
+
+        <div class="flex flex-col gap-2 p-8 border border-slate-300 bg-slate-700 rounded-xl w-fit">
+            <div class="flex flex-col gap-4 justify-center items-center align-middle">
+                <h2 id="features" class="text-white text-4xl font-bold">Login to VeilChat</h2>
+                <form>
+                    <div class="grid grid-cols-4 gap-4 align-middle justify-center items-center">
+                        <label for="username" class="text-white">Username</label>
+                        <input disabled type="text" name="username" placeholder="Username" class="w-96 col-span-3 p-2 rounded-md bg-slate-800 text-white border border-slate-300">
+                        <label for="password" class="text-white">Password</label>
+                        <input disabled type="password" name="password" placeholder="Password" class="w-96 col-span-3 p-2 rounded-md bg-slate-800 text-white border border-slate-300">
+                    </div>
+                </form>
+                <div class="col-span-4 text-red-400 text-center">
+                    Sorry, login is currently disabled during the maintenance period.
+                </div>
+            </div>
+        </div>
+
+        
+
+        
+    </div>
+
+    <div class="bg-slate-950 mt-8 p-16 w-screen text-center">
+        &copy; 2025 VeilChat. All rights reserved.
+    </div>
+
+</body>
+
+</html>

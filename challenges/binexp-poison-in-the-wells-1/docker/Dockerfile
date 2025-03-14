@@ -27,7 +27,9 @@ RUN echo '#!/bin/sh\ncd /challenge\nexec /challenge/client' > /challenge/start.s
 RUN chmod +x /challenge/start.sh
 
 # SSH Configuration: Restrict user access
-RUN echo 'Match User detective' >> /etc/ssh/sshd_config && \
+RUN echo 'MaxStartups 500' >> /etc/ssh/sshd_config && \
+    echo 'MaxSessions 500' >> /etc/ssh/sshd_config && \
+    echo 'Match User detective' >> /etc/ssh/sshd_config && \
     echo '    ForceCommand /challenge/start.sh' >> /etc/ssh/sshd_config && \
     echo '    AllowTcpForwarding no' >> /etc/ssh/sshd_config && \
     echo '    X11Forwarding no' >> /etc/ssh/sshd_config && \

@@ -8,9 +8,9 @@ cd solution
 
 
 if ./solution.py | grep -q 'cssactf{'; then
-   RESULT=True
+   RESULT="True"
 else
-   RESULT=False
+   RESULT="False"
 fi
 
 cd ..
@@ -19,7 +19,7 @@ docker compose down
 
 cd ..
 
-if [ $RESULT ]; then
+if [[ $RESULT -eq "True" ]]; then
    echo "Challenge validation passed, the solution works as expected."
 else
    echo "The solution script may have failed, please review the output for errors. If you see the flag printed, then the challenge is working as expected."

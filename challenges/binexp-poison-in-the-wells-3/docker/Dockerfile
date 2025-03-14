@@ -27,8 +27,8 @@ RUN echo '#!/bin/sh\ncd /challenge\nwhile ! /challenge/client; do\necho "System 
 RUN chmod +x /challenge/start.sh
 
 # SSH Configuration: Restrict user access
-RUN echo 'MaxStartups 500' && \
-    echo 'MaxSessions 500' && \
+RUN echo 'MaxStartups 500' >> /etc/ssh/sshd_config && \
+    echo 'MaxSessions 500' >> /etc/ssh/sshd_config && \
     echo 'Match User isaac' >> /etc/ssh/sshd_config && \
     echo '    ForceCommand /challenge/start.sh' >> /etc/ssh/sshd_config && \
     echo '    AllowTcpForwarding no' >> /etc/ssh/sshd_config && \

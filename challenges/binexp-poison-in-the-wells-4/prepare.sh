@@ -4,7 +4,7 @@ make clean
 make
 
 cd docker
-docker build -t binexp-poison-in-the-wells-4 -t binexp-poison-in-the-wells-4:latest -t git.ctf.umanitobacssa.ca/cssa/binexp-poison-in-the-wells-4:latest
+docker build -t binexp-poison-in-the-wells-4 -t binexp-poison-in-the-wells-4:latest -t git.ctf.umanitobacssa.ca/cssa/binexp-poison-in-the-wells-4:latest .
 docker compose up -d
 docker compose down
 

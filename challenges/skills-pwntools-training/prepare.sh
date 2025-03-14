@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 cd docker
-docker build -t skills-pwntools-training -t skills-pwntools-training:latest -t git.ctf.umanitobacssa.ca/cssa/skills-pwntools-training:latest
+docker build -t skills-pwntools-training -t skills-pwntools-training:latest -t git.ctf.umanitobacssa.ca/cssa/skills-pwntools-training:latest .
 docker compose up -d
 docker compose down
 

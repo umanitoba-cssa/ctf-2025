@@ -21,6 +21,8 @@ Connect with SSH:
 - Enter this command in your terminal: `ssh gateway@poison-in-the-wells-4.ctf.umanitobacssa.ca -p 30204`
 - Enter this password when prompted: `ctf2025!`
 
+*A copy of the server software and source code is provided for your reference. The binary is identical to the hosted version, however the flag can only be found in the hosted version of the program.*
+
 ## Hints
 1. You'll need to use everything you've learned so far. No help for this one!
 

@@ -17,7 +17,7 @@ Connect with SSH:
 - Enter this command in your terminal: `ssh detective@poison-in-the-wells-1.ctf.umanitobacssa.ca -p 30201`
 - Enter this password when prompted: `ctf2025!`
 
-*A copy of the server software and source code is provided. The binary 
+*A copy of the server software and source code is provided for your reference. The binary is identical to the hosted version, however the flag can only be found in the hosted version of the program.*
 
 ## Hints
 1. The file is protected by a password, maybe there's some way to pass that check without knowing the real password?

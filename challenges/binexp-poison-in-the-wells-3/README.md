@@ -15,6 +15,8 @@ Connect with SSH:
 - Enter this command in your terminal: `ssh isaac@poison-in-the-wells-3.ctf.umanitobacssa.ca -p 30203`
 - Enter this password when prompted: `ctf2025!`
 
+*A copy of the server software and source code is provided for your reference. The binary is identical to the hosted version, however the flag can only be found in the hosted version of the program.*
+
 ## Hints
 1. Is the password for the business contact information being stored somewhere vulnerable?
 2. We know how to use a buffer overflow to write data to the stack, but what can we do to read data from the stack?

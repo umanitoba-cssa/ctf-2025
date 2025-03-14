@@ -15,6 +15,8 @@ Connect with SSH:
 - Enter this command in your terminal: `ssh guest@poison-in-the-wells-2.ctf.umanitobacssa.ca -p 30202`
 - Enter this password when prompted: `ctf2025!`
 
+*A copy of the server software and source code is provided for your reference. The binary is identical to the hosted version, however the flag can only be found in the hosted version of the program.*
+
 ## Hints
 1. The authorization level gets checked in the process_input function after typing the details command. Is there some other way to call the details function?
 2. The process_input function returns back to the main function after each command before getting called again. Is there something we can do to "return" somewhere else?

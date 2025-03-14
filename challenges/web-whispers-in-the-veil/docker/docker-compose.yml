@@ -1,0 +1,7 @@
+services:
+    web-whispers-in-the-veil:
+        container_name: web-whispers-in-the-veil
+        image: git.ctf.umanitobacssa.ca/cssa/web-whispers-in-the-veil:latest
+        restart: always
+        ports:
+            - "30402:30402"

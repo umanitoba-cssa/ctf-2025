@@ -112,9 +112,21 @@ int silly_check_2(char *word) {
 	return sum != 15;
 }
 
+int has_secret_msg(char *word, int idx) {
+	if (word == NULL || idx < 0 || (idx+2) >= strlen(word)) {
+		return 0;
+	}
+
+	return (word[idx+1] == 'i' && word[idx+2] == 'n');
+}
+
 int check_1(char *word) {
-	if (strstr(word, "win") != NULL) {
-		return 1;
+	for (int i = 0; i < strlen(word); ++i) {
+		if (word[i]  == 'w') {
+			if (has_secret_msg(word, i)) {
+				return 1;
+			}
+		}
 	}
 
 	return 0;
@@ -122,7 +134,7 @@ int check_1(char *word) {
 
 
 int dumb_function(char *word) {
-	return strcmp(word, "flagpls78");
+	return strcmp(word, "g1ve_me_the_fl4g");
 }
 
 int calculate_bogus_checksum(char *word) {

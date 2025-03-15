@@ -13,7 +13,7 @@ We need you to break into Hackers Anonymous and find the job request that links 
 
 Unfortunately we couldn't find the full source code for the server software online, but we were able to leak a diff for a recent commit from their git server. They quickly patched the hole before we could dump the full repository, so hopefully there's something in this diff that exposes a vulnerability you can exploit.
 
-<https://hackers-anonymous.ctf.umanitoba.ca:30401>
+<http://hackers-anonymous.ctf.umanitobacssa.ca:30401>
 
 ## Hints
 1. You need to break into an account, is there anything notable about the authentication mechanism?

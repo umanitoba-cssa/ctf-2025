@@ -7,6 +7,8 @@
 ## Description
 We found a webpage that we believe a criminal is using to coordinate with others. We keep detecting that the contents of the page change weekly, but we have no idea what the password is to view the data. Can you take a look?
 
+<http://client-sided.ctf.umanitobacssa.ca>
+
 ## Hints
 - Inspect element
 

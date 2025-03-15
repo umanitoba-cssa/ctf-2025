@@ -31,4 +31,4 @@ There's one small catch, the `get_details` function needs the file path to alrea
 A pwntools solution script is provided in ./solution
 
 ## Flag
-`cssactf{lE7-m3-Se3-t4e-Wi7n3ss-Te5t1m0ny-82fe2946}`
+`cssactf{r3TurN-t0-Cu5t0m3R-5ed363eb}`

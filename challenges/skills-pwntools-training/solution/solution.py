@@ -5,7 +5,7 @@ from pwn import *
 
 # The ssh function lets us create a connection to an SSH server. We can specify the username, hostname, port, and password.
 # IMPORTANT: You MUST specify the raw=True parameter for our SSH challenges, otherwise pwntools will not work!
-connection = ssh("connect", "localhost", 10101, "ctf2025!", raw=True)
+connection = ssh("connect", "pwntools-training.ctf.umanitobacssa.ca", 10101, "ctf2025!", raw=True)
 
 # Then we can get a pipe to talk to the server with using the .shell() method.
 io = connection.shell()

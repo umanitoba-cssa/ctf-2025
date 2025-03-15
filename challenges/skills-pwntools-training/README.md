@@ -13,7 +13,7 @@ If you don't know what any of that means, don't worry! I've given you a Python f
 
 So here's the challenge: use pwntools, a library for Python, to connect to our training server and solve a challenge. You can try to connect to the server yourself if you wish:
 
-`ssh connect@localhost -p 10101`
+`ssh connect@pwntools-training.ctf.umanitobacssa.ca -p 10101`
 
 And enter the password `ctf2025!` when prompted.
 

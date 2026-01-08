@@ -1,0 +1,19 @@
+name: '# Corrupt Files Department 2'
+author: CSSA
+category: Forensics
+description: 'Welcome to the Corrupt Files Department, you think in your head. Earlier today, your junior detective handed you a piece of evidence that they had clumsily opened and saved in **Windows** with some jank **text editor** program to save as a **PDF** file, messing it up even when you use a **Linux** system like a righteous detective would. Perhaps it''s still saveable after some tinkering, so you unfurl your eyebrows and get to work.
+
+
+  Hints:
+
+  1. What do *nix systems and Windows systems do differently specifically with text editing?'
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{Backslash_r_Backslash_n}
+  type: static
+tags:
+- Easy
+files:
+- evidence_d2FycGVk.pdf

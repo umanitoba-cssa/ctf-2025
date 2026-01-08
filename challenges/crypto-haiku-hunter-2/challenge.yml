@@ -1,0 +1,14 @@
+name: '# Haiku Hunter - The Second Riddle'
+author: CSSA
+category: Cryptography
+description: "The Haiku Hunter has claimed another victim! This time, a mathematics professor was found in their office with yet another encrypted message. Alongside the body was a small note containing this haiku:\n\n    Tiny change's the name\n    Each step depends on the last\n    First truth starts the path\n    \nThe police have recovered the encrypted file, but it appears the Haiku Hunter has upgraded their encryption method. Can you decode this message and find the clue left behind?"
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{d3lt4_3nc0d1ng_r3v34ls_th3_p4tt3rn}
+  type: static
+tags:
+- Medium
+files:
+- message.bin

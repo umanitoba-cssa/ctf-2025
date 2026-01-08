@@ -3,7 +3,7 @@
 - Cryptography
 - Easy
 
-## Description:
+## Description
 'Ey boss, we found a few of things written in blood at the scene of the crime... roughly around where the victim's body was found. Must be a dyin' message eh? Anyways, it was pretty hard to figure out what they meant by the things written so we just transcribed 'em in this 'ere paper. Best of luck to ya, detective.
 
 ## Solution

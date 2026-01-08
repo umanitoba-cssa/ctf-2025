@@ -1,4 +1,4 @@
-# Corrupt Files Department 1
+# Corrupt Files Department 2
 - Revision 0
 - Forensics
 - Easy

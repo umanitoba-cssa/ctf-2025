@@ -1,16 +1,23 @@
 name: '# whispers-in-the-veil'
 author: CSSA
-category: Misc
-description: "The murder investigation of tech mogul Daniel Crowe has hit a dead end.\
-  \ While the prime suspect, known online as nexxode, was seen near the scene of the\
-  \ crime, investigators believe they had accomplices\u2014co-conspirators hiding\
-  \ in the digital shadows.\n\nAll clues point to VeilChat, a secretive chat platform\
-  \ known for its underground user base. Authorities have identified nexxode as an\
-  \ active user, but without access to their chat history, the case remains unsolved.\n\
-  \nYour mission: Hack into VeilChat and uncover the conversations of those in contact\
-  \ with nexxode.\n\n<http://whispers-in-the-veil.ctf.umanitobacssa.ca:30402>\n\n\
-  Hints:\n- Have the developers left any useful clues behind in the source code of\
-  \ any of the pages?\n- Is there anything interesting about how the home page works?"
+category: Web Exploitation
+description: 'The murder investigation of tech mogul Daniel Crowe has hit a dead end. While the prime suspect, known online as nexxode, was seen near the scene of the crime, investigators believe they had accomplices—co-conspirators hiding in the digital shadows.
+
+
+  All clues point to VeilChat, a secretive chat platform known for its underground user base. Authorities have identified nexxode as an active user, but without access to their chat history, the case remains unsolved.
+
+
+  Your mission: Hack into VeilChat and uncover the conversations of those in contact with nexxode.
+
+
+  <http://whispers-in-the-veil.ctf.umanitobacssa.ca:30402>
+
+
+  Hints:
+
+  - Have the developers left any useful clues behind in the source code of any of the pages?
+
+  - Is there anything interesting about how the home page works?'
 value: 300
 type: standard
 state: visible

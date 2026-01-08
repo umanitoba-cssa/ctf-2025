@@ -1,14 +1,10 @@
 name: '# Empty Evidence'
 author: CSSA
-category: Misc
-description: 'You receive a strange email with a file attached. To your dismay, you
-  see that it contains nothing. However, you notice that, suspiciously, there are
-  34 lines. Perhaps this wasn''t just a sick prank after all? Follow this empty trail
-  to get to the answer.
+category: Cryptography
+description: 'You receive a strange email with a file attached. To your dismay, you see that it contains nothing. However, you notice that, suspiciously, there are 34 lines. Perhaps this wasn''t just a sick prank after all? Follow this empty trail to get to the answer.
 
 
-  > Answer isn''t in "cssactf{...}" format but simply enter your answer as if it were
-  contained by "cssactf{...}".'
+  > Answer isn''t in "cssactf{...}" format but simply enter your answer as if it were contained by "cssactf{...}".'
 value: 100
 type: standard
 state: visible
@@ -16,6 +12,6 @@ flags:
 - flag: cssactf{NowYouSeeMeNowYouDont}
   type: static
 tags:
-- Medium
+- Easy
 files:
 - evidence_ZW1wdHk=.txt

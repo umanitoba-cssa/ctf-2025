@@ -1,17 +1,16 @@
 name: '# The Circular Testimony'
 author: CSSA
-category: Misc
-description: "Idea provided by Rob Guderian (thanks Rob).\n\nDetective Miles has been\
-  \ investigating the notorious \"Circular Killer\" for months. The murderer is known\
-  \ for arranging victims in a circular pattern and leaving cryptic messages written\
-  \ in code at each crime scene.\n\nAfter interviewing a key witness who glimpsed\
-  \ the killer's latest message, Detective Miles recorded the testimony in his custom\
-  \ digital recorder\u2014a device he designed himself. But when reviewing the notes\
-  \ later, something strange happened: only fragments of the witness's account were\
-  \ visible, and what might be crucial evidence seems to have disappeared.\n\nMiles\
-  \ needs your help to recover the complete testimony, which might contain information\
-  \ about the killer's identity or their next target. Can you exploit the device's\
-  \ memory bug and reveal the hidden message before the killer strikes again?"
+category: Binary Exploitation
+description: 'Idea provided by Rob Guderian (thanks Rob).
+
+
+  Detective Miles has been investigating the notorious "Circular Killer" for months. The murderer is known for arranging victims in a circular pattern and leaving cryptic messages written in code at each crime scene.
+
+
+  After interviewing a key witness who glimpsed the killer''s latest message, Detective Miles recorded the testimony in his custom digital recorder—a device he designed himself. But when reviewing the notes later, something strange happened: only fragments of the witness''s account were visible, and what might be crucial evidence seems to have disappeared.
+
+
+  Miles needs your help to recover the complete testimony, which might contain information about the killer''s identity or their next target. Can you exploit the device''s memory bug and reveal the hidden message before the killer strikes again?'
 value: 100
 type: standard
 state: visible
@@ -19,6 +18,6 @@ flags:
 - flag: cssactf{c1rcul4r_buff3r_l34k}
   type: static
 tags:
-- Medium
+- Easy
 files:
 - circular_testimony

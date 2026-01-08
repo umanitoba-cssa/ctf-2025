@@ -1,13 +1,7 @@
 name: '# Haiku Hunter - The Third Riddle'
 author: CSSA
-category: Misc
-description: "The Haiku Hunter's third victim has been discovered - a librarian found\
-  \ dead amidst scattered puzzle pieces. Once again, a haiku was left at the scene:\n\
-  \n    Scattered pieces wait\n    Each fragment yearns for its place\n    Order hides\
-  \ in words\n    \nAlong with the haiku, a strange encoded message was found. Stranger\
-  \ still, a lengthy letter was discovered nearby that seems to contain the Haiku\
-  \ Hunter's manifesto. The detectives believe the key to decoding the message lies\
-  \ somewhere within this text."
+category: Cryptography
+description: "The Haiku Hunter's third victim has been discovered - a librarian found dead amidst scattered puzzle pieces. Once again, a haiku was left at the scene:\n\n    Scattered pieces wait\n    Each fragment yearns for its place\n    Order hides in words\n    \nAlong with the haiku, a strange encoded message was found. Stranger still, a lengthy letter was discovered nearby that seems to contain the Haiku Hunter's manifesto. The detectives believe the key to decoding the message lies somewhere within this text."
 value: 100
 type: standard
 state: visible

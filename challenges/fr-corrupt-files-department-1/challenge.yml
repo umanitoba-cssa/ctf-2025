@@ -1,11 +1,7 @@
-name: '# Corrupt Files Department 2'
+name: '# Corrupt Files Department 1'
 author: CSSA
-category: Misc
-description: 'Your junior detective has really outdone themselves again. This time,
-  you are handed the piece of evidence in-person since they can no longer trust technology.
-  However, it appears that their child may have gotten ahold of it. Maybe you can
-  salvage what little is left of the **QR code** by fixing it up? It feels like it''s
-  going to be a long day at work...
+category: Forensics
+description: 'Your junior detective has really outdone themselves again. This time, you are handed the piece of evidence in-person since they can no longer trust technology. However, it appears that their child may have gotten ahold of it. Maybe you can salvage what little is left of the **QR code** by fixing it up? It feels like it''s going to be a long day at work...
 
 
   Hints:
@@ -20,6 +16,6 @@ flags:
 - flag: cssactf{Three_Squares_Best_Squares}
   type: static
 tags:
-- Medium
+- Easy
 files:
 - evidence_cGFpbnRlZA==.jpg

@@ -1,0 +1,24 @@
+name: '# Madame Gene Gripene 1'
+author: CSSA
+category: Misc
+description: 'Salutations, my dearest hacker interns.
+
+
+  My dear husband, Jean Kripene, was one of the lead detectives in this mystery. Unfortunately,
+  he was hostpitalized after tripping over a chair and hitting his cranium. His notes
+  are still on his computer, but they''ve been locked away.
+
+
+  I need you to prove your ability in decrypting and deciphering these messages. Therefore,
+  you will need to pass this first, single test. *She passes you a note with a scrambled
+  flag and the symbol XLII*.'
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{youpassedthetest}
+  type: static
+tags:
+- Medium
+files:
+- mdm-gg-1.txt

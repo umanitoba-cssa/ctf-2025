@@ -1,0 +1,36 @@
+name: '# The Knock-Knock Killer'
+author: CSSA
+category: Misc
+description: "Idea provided by Rob Guderian (thanks Rob).\n\nThe notorious \"Knock-Knock\
+  \ Killer\" has been terrorizing the city of Ravenholm for months, leaving a trail\
+  \ of precisely arranged crime scenes and cryptic messages. Detective Sarah Miller\
+  \ has been tracking this methodical serial killer across three brutal murders, growing\
+  \ increasingly desperate as the pattern suggests a fourth victim is imminent.\n\n\
+  Each victim was found in a carefully staged tableau, with peculiar marks on door\
+  \ frames suggesting the killer announces their presence with a specific sequence\
+  \ of knocks before entering. Neighbors have reported hearing four knocks at a time,\
+  \ but they aren't sure what happened next.\n\nAfter investigating the third murder\
+  \ scene yesterday, Detective Miller discovered a weathered leather-bound journal\
+  \ hidden beneath a floorboard. The journal appears to belong to the killer and contains\
+  \ this chilling entry written in meticulous handwriting:\n\n> *\"My work begins\
+  \ when the clock strikes twelve and darkness reigns supreme. The first announcement\
+  \ of my presence shall come at port 3712, when the stars align and the moon casts\
+  \ no shadow.*\n> \n> *Each knock brings me closer to my masterpiece. The sequence\
+  \ must be perfect, or the ritual fails.*\n> \n> *Tonight, I will complete what I\
+  \ started. The next victim has been chosen. Their door awaits my touch.\"*\n\nThe\
+  \ journal entry abruptly ends there. Detective Miller believes that by following\
+  \ the killer's knock pattern, she might intercept crucial information about the\
+  \ next victim's location or identity. The department's cyber forensics unit has\
+  \ detected unusual network traffic from what they believe is the killer's command\
+  \ server.\n\nThe clock is ticking. Can you help Detective Miller decode the knock\
+  \ sequence and potentially save a life before midnight strikes again? Navigate to\
+  \ the killer's server running at `<server_ip>`, if you can find your way..."
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{kn0ck_kn0ck_th3_k1ll3r_w45_h3r3}
+  type: static
+tags:
+- Medium
+files: []

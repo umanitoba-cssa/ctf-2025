@@ -1,0 +1,28 @@
+name: '# Haiku Hunter - The Final Riddle'
+author: CSSA
+category: Forensics
+description: "The Haiku Hunter's reign of terror is nearing its climax! A senior cryptographer\
+  \ was found dead in a locked room with only a computer displaying an encrypted file\
+  \ and a final haiku:\n\n    Advanced standard hides\n    Words wear masks of other\
+  \ words\n    Last bytes must be found\n\nThe computer contains an encrypted file\
+  \ and a peculiar document titled \"cipher.txt\" that appears to be a translation\
+  \ dictionary of some kind - each line contains a common English word. There's also\
+  \ a sticky note with \"1337\" written on it, followed by \"Partial key only! Last\
+  \ 16-bits missing.\"\n\nForensics revealed that the victim was working on advanced\
+  \ cryptographic algorithms. Their recent browser history shows research on AES encryption,\
+  \ SHA-256 hashing algorithms, and classical substitution techniques. A notepad was\
+  \ found with scribbled notes: \"CBC mode... use words as byte values... hash the\
+  \ seed...\"\n\nThis could be our last chance to stop the Haiku Hunter before their\
+  \ \"masterpiece\" is complete. Decrypt the message and end this nightmare once and\
+  \ for all."
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{m4st3r_0f_l4y3r3d_3ncrypt10n_4nd_0bfusc4t10n}
+  type: static
+tags:
+- Medium
+files:
+- cipher.txt
+- encrypted.txt

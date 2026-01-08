@@ -1,0 +1,25 @@
+name: '# Corrupt Files Department 2'
+author: CSSA
+category: Misc
+description: 'Your junior detective has really outdone themselves again. This time,
+  you are handed the piece of evidence in-person since they can no longer trust technology.
+  However, it appears that their child may have gotten ahold of it. Maybe you can
+  salvage what little is left of the **QR code** by fixing it up? It feels like it''s
+  going to be a long day at work...
+
+
+  Hints:
+
+  1. Is you device recognizing the the QR code?
+
+  2. What does your device need to recognize the QR code?'
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{Three_Squares_Best_Squares}
+  type: static
+tags:
+- Medium
+files:
+- evidence_cGFpbnRlZA==.jpg

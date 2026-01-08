@@ -1,0 +1,20 @@
+name: '# Laptop Breach'
+author: CSSA
+category: Misc
+description: 'We found what we strongly believe is the killer''s laptop. There''s
+  a slight issue though, we can''t seem to get in. Can you give it a crack?
+
+
+  Hints:
+
+  1. What does `0x30` mean? Why might we be adding `-0x30`?'
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{4cce55_gr4nt3d!}
+  type: static
+tags:
+- Medium
+files:
+- laptop_breach

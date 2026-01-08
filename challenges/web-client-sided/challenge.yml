@@ -1,0 +1,23 @@
+name: '# client-sided'
+author: CSSA
+category: Misc
+description: 'We found a webpage that we believe a criminal is using to coordinate
+  with others. We keep detecting that the contents of the page change weekly, but
+  we have no idea what the password is to view the data. Can you take a look?
+
+
+  <http://client-sided.ctf.umanitobacssa.ca>
+
+
+  Hints:
+
+  - Inspect element'
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{Au7H-0N-7#E-B@cK3nD-56cb8a6}
+  type: static
+tags:
+- Medium
+files: []

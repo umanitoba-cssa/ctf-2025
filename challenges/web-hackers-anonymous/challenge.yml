@@ -1,0 +1,36 @@
+name: '# hackers-anonymous'
+author: CSSA
+category: Misc
+description: "Detective, we have a lead. The primary suspect in a high-profile murder\
+  \ case, Lucas Vance, had the perfect alibi - too perfect. His travel records, rental\
+  \ agreements, and even financial transactions all check out\u2026 except they were\
+  \ forged. Someone expertly altered the digital records to shift the blame onto an\
+  \ innocent party.\n\nOur forensics team uncovered an anonymous cryptocurrency transaction\
+  \ between Lucas and a hacker-for-hire service known as Hackers Anonymous. We\u2019\
+  ve linked the payment to a specific username on their underground marketplace, but\
+  \ that's not enough - without solid proof that the hacker was hired to forge documents,\
+  \ our case won't hold up in court.\n\nWe need you to break into Hackers Anonymous\
+  \ and find the job request that links a user by the name of **voidwalker** to the\
+  \ crime. Can you find a way to break into his account and check his job history?\n\
+  \nUnfortunately we couldn't find the full source code for the server software online,\
+  \ but we were able to leak a diff for a recent commit from their git server. They\
+  \ quickly patched the hole before we could dump the full repository, so hopefully\
+  \ there's something in this diff that exposes a vulnerability you can exploit.\n\
+  \n<http://hackers-anonymous.ctf.umanitobacssa.ca:30401>\n\nHints:\n1. You need to\
+  \ break into an account, is there anything notable about the authentication mechanism?\n\
+  2. Does the website provide some way to login to an account if we don't have the\
+  \ password?\n3. The password and the account recovery token must be stored somewhere\
+  \ for them to validate it, is there any vulnerability that can help leak or interfere\
+  \ with that data?\n\nAdditional hints if very few teams are able to solve the challenge\
+  \ late into the CTF:\n\n4. This might be a helpful resource: <https://ctf101.org/web-exploitation/sql-injection/what-is-sql-injection/>\n\
+  5. *Provide the full index.js source file*"
+value: 400
+type: standard
+state: visible
+flags:
+- flag: cssactf{pR3p@reD-1Nj3c7!0nS-@N0nYm0Us-f9e07432}
+  type: static
+tags:
+- Medium
+files:
+- 5fe1289f.diff

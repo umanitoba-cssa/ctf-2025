@@ -1,0 +1,14 @@
+name: '# Same Same But Different'
+author: CSSA
+category: Misc
+description: ''
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{Triple_Threat_Is_Best_Threat}
+  type: static
+tags:
+- Medium
+files:
+- evidence_ZHlpbmcgbWVzc2FnZQ==.txt

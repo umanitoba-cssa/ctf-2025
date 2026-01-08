@@ -1,0 +1,33 @@
+name: '# Witness Alibi'
+author: CSSA
+category: Misc
+description: 'We got access to the alibi of one of our witnesses. We''ve taken a look
+  and checked everything, but it doesn''t seem to hold up. She swears she''s innocent
+  but we can''t seem to find anything here to support that claim.
+
+  The worst part of it all? She''s gone missing now and we can''t get a hold of her.
+
+
+  She said something about booby trapping this file... muttered something about a
+  killer being after her. She seemed paranoid.
+
+
+  Anyway, can you help us take a look at her alibi and make sure it checks out?
+
+
+  Hints:
+
+  1. The binary is compiled with debug symbols.
+
+  2. She seemed to say something about setting up a decoy alibi. Can you check if
+  her real alibi is around somewhere?'
+value: 100
+type: standard
+state: visible
+flags:
+- flag: cssactf{pwn3d_4_susp3ct_4l1b1_1a3z5q7w}
+  type: static
+tags:
+- Medium
+files:
+- witness_alibi

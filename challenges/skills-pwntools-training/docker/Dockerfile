@@ -1,5 +1,6 @@
 # Use a minimal, secure Linux base image
 FROM python:3.10-bookworm
+LABEL org.opencontainers.image.source=https://github.com/umanitoba-cssa/ctf-2025
 
 # Install only essential packages
 RUN apt-get update && apt-get install -y \

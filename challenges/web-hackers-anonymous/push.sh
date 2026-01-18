@@ -4,7 +4,7 @@ make clean
 make
 
 cd docker
-docker build -t web-hackers-anonymous -t web-hackers-anonymous:latest -t git.ctf.umanitobacssa.ca/cssa/web-hackers-anonymous:latest .
-docker image push git.ctf.umanitobacssa.ca/cssa/web-hackers-anonymous:latest
+docker build -t web-hackers-anonymous -t web-hackers-anonymous:latest -t ghcr.io/umanitoba-cssa/ctf-2025/web-hackers-anonymous:latest .
+docker image push ghcr.io/umanitoba-cssa/ctf-2025/web-hackers-anonymous:latest
 
 cd ..
